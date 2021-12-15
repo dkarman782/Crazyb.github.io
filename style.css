@@ -1,6 +1,6 @@
 .input_agi{
     width: 90%;
-    height: 220px;
+    height: 80%;
     margin: 0 auto;
     text-align: center;
     padding: 5px;
@@ -48,7 +48,7 @@ td[id="player"]{
     color: white;
     text-align: center;
 }
-p[id="author"], p[id="warau"]{
+p[id="warau"]{
     text-align: right;
     padding-right: 5px;
 }
