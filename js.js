@@ -245,8 +245,8 @@ function rnd_dmg(){
 	
 	var rnd_dmga_0 = x.toFixed(2)/x;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
-	rnd_dmga_0 = (1-rnd_dmga_0)*x.toFixed(2);
-	rnd_dmga_0 = x/rnd_dmga_0;
+	rnd_dmga_0 = (1-rnd_dmga_0)*x;
+	rnd_dmga_0 = rnd_dmga_0/x.toFixed(2);
 	rnd_dmga_0 = (rnd_dmga_0+1)*dmgA;
 	rnd_dmga_0 = Number(rnd_dmga_0.toFixed(1));
 	
