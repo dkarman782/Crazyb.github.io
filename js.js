@@ -2,10 +2,10 @@ function war_count(){
 		const form = document.forms['input_agi'];
 		var Ap_agi = Number(form.elements.Ap_agi.value);
 		var Bp_agi = Number(form.elements.Bp_agi.value);
-		var Aa_agi = Number(form.elements.Aa_agi.value);
-		var Ba_agi = Number(form.elements.Ba_agi.value);
-		var Ad_agi = Number(form.elements.Ad_agi.value);
-		var Bd_agi = Number(form.elements.Bd_agi.value);
+		var Aa_agi = Number(form.elements.Aa_agi.value)/100;
+		var Ba_agi = Number(form.elements.Ba_agi.value)/100;
+		var Ad_agi = Number(form.elements.Ad_agi.value)/100;
+		var Bd_agi = Number(form.elements.Bd_agi.value)/100;
 
 		var Atype = Number(form.elements.A_type.value);
 		var Btype = Number(form.elements.B_type.value);
