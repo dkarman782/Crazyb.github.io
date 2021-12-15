@@ -57,6 +57,39 @@ p[id="warau"]{
     text-align: center;
     padding-right: 20px;
 }
+.input_dmg{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+.showrnd{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+input[id="input_dmg"], select[id="input_dmg"]{
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+}
+table[class="showrnd"]{
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+table[class="input_dmg"]{
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
 button{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -84,3 +117,4 @@ button{
 .topnav a.active {
     color: white;
 }
+
