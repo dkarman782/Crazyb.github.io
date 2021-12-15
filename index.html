@@ -11,6 +11,7 @@
 		<title>地城邂逅先手機率</title>
 	</head>
 	<body>
+<!--
 		<nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -28,6 +29,7 @@
 				</div>
 			</div>
 		</nav>
+-->
 		<div class="tab-content">
 			<div id="home" class="tab-pane fade in active">
 				<br><br>
@@ -141,7 +143,28 @@
 				</div>
 			</div>
 			<div id="damage" class="tab-pane fade">
-				
+				<div class="input_dmg" style="border: solid 1px silver; border-radius: 15px;">
+					<form name="input_dmg" id="input_dmg">
+						<table class="input_dmg">
+							<tr>
+								<td id="player" colspan="3">浮動傷害表</td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>傷害A</td>
+								<td>傷害B</td>
+							</tr>
+							<tr>
+								<td><input id="input_dmg" name="Ap_dmg" type="number" /></td>
+								<td><input id="input_dmg" name="Bp_dmg" type="number" /></td>
+							</tr>
+						</table><br>
+						<p>
+							<input type="button" name="submit" value="計算" onclick="rnd_dmg()" />
+							<input type="reset" value="重置" />
+						</p>
+					</form>
+				</div>
 			</div>
 		</div>
 	</body>
