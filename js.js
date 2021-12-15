@@ -241,20 +241,24 @@ function rnd_dmg(){
 	const form = document.forms['input_dmg'];
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
-	var x = 1-dmgA/dmgB
+	var x = 1-dmgA/dmgB;
 	
-	var rnd_dmga_0 = round(dmgA*(1+x/round(x,2)*(1-round(round(x,2)/x,2))))
+	var rnd_dmga_0 = x.toFixed(2)/x;
+	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
+	rnd_dmga_0 = (1-rnd_dmga_0)*x.toFixed(2);
+	rnd_dmga_0 = x/rnd_dmga_0;
+	rnd_dmga_0 = (rnd_dmga_0+1)*dmgA;
 	rnd_dmga_0 = Number(rnd_dmga_0.toFixed(1));
 	
-	var rnd_dmga_1 = rnd_dmga_0*1.01
-	var rnd_dmga_2 = rnd_dmga_0*1.02
-	var rnd_dmga_3 = rnd_dmga_0*1.03
-	var rnd_dmga_4 = rnd_dmga_0*1.04
+	var rnd_dmga_1 = rnd_dmga_0*1.01;
+	var rnd_dmga_2 = rnd_dmga_0*1.02;
+	var rnd_dmga_3 = rnd_dmga_0*1.03;
+	var rnd_dmga_4 = rnd_dmga_0*1.04;
 	
-	var rnd_dmgd_1 = rnd_dmga_0*0.99
-	var rnd_dmgd_2 = rnd_dmga_0*0.98
-	var rnd_dmgd_3 = rnd_dmga_0*0.97
-	var rnd_dmgd_4 = rnd_dmga_0*0.96
+	var rnd_dmgd_1 = rnd_dmga_0*0.99;
+	var rnd_dmgd_2 = rnd_dmga_0*0.98;
+	var rnd_dmgd_3 = rnd_dmga_0*0.97;
+	var rnd_dmgd_4 = rnd_dmga_0*0.96;
 	
 	rnd_dmga_1 = Number(rnd_dmga_1.toFixed(1));
 	rnd_dmga_2 = Number(rnd_dmga_2.toFixed(1));
