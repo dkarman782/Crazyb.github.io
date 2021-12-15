@@ -244,6 +244,7 @@ function rnd_dmg(){
 	var x = 1-dmgA/dmgB
 	
 	var rnd_dmga_0 = round(dmgA*(1+x/round(x,2)*(1-round(round(x,2)/x,2))))
+	rnd_dmga_0 = Number(rnd_dmga_0.toFixed(1));
 	
 	var rnd_dmga_1 = rnd_dmga_0*1.01
 	var rnd_dmga_2 = rnd_dmga_0*1.02
@@ -255,5 +256,22 @@ function rnd_dmg(){
 	var rnd_dmgd_3 = rnd_dmga_0*0.97
 	var rnd_dmgd_4 = rnd_dmga_0*0.96
 	
+	rnd_dmga_1 = Number(rnd_dmga_1.toFixed(1));
+	rnd_dmga_2 = Number(rnd_dmga_2.toFixed(1));
+	rnd_dmga_3 = Number(rnd_dmga_3.toFixed(1));
+	rnd_dmga_4 = Number(rnd_dmga_4.toFixed(1));
+	rnd_dmgd_1 = Number(rnd_dmgd_1.toFixed(1));
+	rnd_dmgd_2 = Number(rnd_dmgd_2.toFixed(1));
+	rnd_dmgd_3 = Number(rnd_dmgd_3.toFixed(1));
+	rnd_dmgd_4 = Number(rnd_dmgd_4.toFixed(1));
+	
 	document.getElementById("rnd_dmga_0").innerHTML = rnd_dmga_0;
+	document.getElementById("rnd_dmga_1").innerHTML = rnd_dmga_1;
+	document.getElementById("rnd_dmga_2").innerHTML = rnd_dmga_2;
+	document.getElementById("rnd_dmga_3").innerHTML = rnd_dmga_3;
+	document.getElementById("rnd_dmga_4").innerHTML = rnd_dmga_4;
+	document.getElementById("rnd_dmgd_1").innerHTML = rnd_dmgd_1;
+	document.getElementById("rnd_dmgd_2").innerHTML = rnd_dmgd_2;
+	document.getElementById("rnd_dmgd_3").innerHTML = rnd_dmgd_3;
+	document.getElementById("rnd_dmgd_4").innerHTML = rnd_dmgd_4;
 }
