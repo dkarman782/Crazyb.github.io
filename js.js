@@ -241,7 +241,7 @@ function rnd_dmg(){
 	const form = document.forms['input_dmg'];
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
-	var x = 1-dmgA/dmgB;
+	var x = 1-dmgB/dmgA;
 	
 	var rnd_dmga_0 = x.toFixed(2)/x;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
