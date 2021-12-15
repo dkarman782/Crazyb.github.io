@@ -258,15 +258,15 @@ function rnd_dmg(){
 	var rnd_dmgd_3 = rnd_dmga_0*0.97;
 	var rnd_dmgd_4 = rnd_dmga_0*0.96;
 	
-	rnd_dmga_0 = Number(rnd_dmga_0.toFixed(0));
-	rnd_dmga_1 = Number(rnd_dmga_1.toFixed(0));
-	rnd_dmga_2 = Number(rnd_dmga_2.toFixed(0));
-	rnd_dmga_3 = Number(rnd_dmga_3.toFixed(0));
-	rnd_dmga_4 = Number(rnd_dmga_4.toFixed(0));
-	rnd_dmgd_1 = Number(rnd_dmgd_1.toFixed(0));
-	rnd_dmgd_2 = Number(rnd_dmgd_2.toFixed(0));
-	rnd_dmgd_3 = Number(rnd_dmgd_3.toFixed(0));
-	rnd_dmgd_4 = Number(rnd_dmgd_4.toFixed(0));
+	rnd_dmga_0 = Number(Math.floor(rnd_dmga_0));
+	rnd_dmga_1 = Number(Math.floor(rnd_dmga_1));
+	rnd_dmga_2 = Number(Math.floor(rnd_dmga_2));
+	rnd_dmga_3 = Number(Math.floor(rnd_dmga_3));
+	rnd_dmga_4 = Number(Math.floor(rnd_dmga_4));
+	rnd_dmgd_1 = Number(Math.floor(rnd_dmgd_1));
+	rnd_dmgd_2 = Number(Math.floor(rnd_dmgd_2));
+	rnd_dmgd_3 = Number(Math.floor(rnd_dmgd_3));
+	rnd_dmgd_4 = Number(Math.floor(rnd_dmgd_4));
 	
 	document.getElementById("rnd_dmga_0").innerHTML = rnd_dmga_0;
 	document.getElementById("rnd_dmga_1").innerHTML = rnd_dmga_1;
