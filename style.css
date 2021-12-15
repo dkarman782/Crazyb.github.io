@@ -1,16 +1,16 @@
 .input_agi{
     width: 90%;
-    height: 70%;
+    height: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 5px;
+    padding: 15px;
 }
 .showfirst{
     width: 90%;
     height: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 5px;
+    padding: 15px;
 }
 table{
     width: 95%;
@@ -23,7 +23,7 @@ input[id="input_agi"], select[id="input_agi"]{
     height: 80%;
     width: 50%;
     margin: 0 auto;
-    padding: 1px;
+    padding: 2px;
     text-align: center;
 }
 table[class="showfirst"]{
@@ -50,7 +50,7 @@ td[id="player"]{
 }
 p[id="warau"]{
     text-align: center;
-    padding-right: 5px;
+    padding-right: 20px;
 }
 button{
     -webkit-appearance: none;
