@@ -249,6 +249,10 @@ function rnd_dmg(){
 	rnd_dmga_0 = rnd_dmga_0/x.toFixed(2);
 	rnd_dmga_0 = (rnd_dmga_0+1)*dmgA;
 	
+	rnd_dmga_0 = dmgA/rnd_dmga_0;
+	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
+	rnd_dmga_0 = dmgA/rnd_dmga_0;
+	
 	var rnd_dmga_1 = rnd_dmga_0*1.01;
 	var rnd_dmga_2 = rnd_dmga_0*1.02;
 	var rnd_dmga_3 = rnd_dmga_0*1.03;
