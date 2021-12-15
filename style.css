@@ -3,14 +3,14 @@
     height: 220px;
     margin: 0 auto;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 .showfirst{
     width: 90%;
     height: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 table{
     width: 95%;
@@ -50,7 +50,7 @@ td[id="player"]{
 }
 p[id="author"], p[id="warau"]{
     text-align: right;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 button{
     -webkit-appearance: none;
