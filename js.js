@@ -296,23 +296,23 @@ function rnd_dmg(){
 	rnd_dmgd_3 = Number(Math.floor(rnd_dmgd_3));
 	rnd_dmgd_4 = Number(Math.floor(rnd_dmgd_4));
 	
-	if(abs(rnd_dmga_0-dmgA)<th||abs(rnd_dmga_0-dmgB)<th) { ChangeFontColor("rnd_dmga_0",highlight);
+	if(Math.abs(rnd_dmga_0-dmgA)<th||Math.abs(rnd_dmga_0-dmgB)<th) { ChangeFontColor("rnd_dmga_0",highlight);
 	} else { ChangeFontColor("rnd_dmga_0",common); }
-	if(abs(rnd_dmga_1-dmgA)<th||abs(rnd_dmga_1-dmgB)<th) { ChangeFontColor("rnd_dmga_1",highlight);
+	if(Math.abs(rnd_dmga_1-dmgA)<th||Math.abs(rnd_dmga_1-dmgB)<th) { ChangeFontColor("rnd_dmga_1",highlight);
 	} else { ChangeFontColor("rnd_dmga_1",common); }
-	if(abs(rnd_dmga_2-dmgA)<th||abs(rnd_dmga_2-dmgB)<th) { ChangeFontColor("rnd_dmga_2",highlight);
+	if(Math.abs(rnd_dmga_2-dmgA)<th||Math.abs(rnd_dmga_2-dmgB)<th) { ChangeFontColor("rnd_dmga_2",highlight);
 	} else { ChangeFontColor("rnd_dmga_2",common); }
-	if(abs(rnd_dmga_3-dmgA)<th||abs(rnd_dmga_3-dmgB)<th) { ChangeFontColor("rnd_dmga_3",highlight);
+	if(Math.abs(rnd_dmga_3-dmgA)<th||Math.abs(rnd_dmga_3-dmgB)<th) { ChangeFontColor("rnd_dmga_3",highlight);
 	} else { ChangeFontColor("rnd_dmga_3",common); }
-	if(abs(rnd_dmga_4-dmgA)<th||abs(rnd_dmga_4-dmgB)<th) { ChangeFontColor("rnd_dmga_4",highlight);
+	if(Math.abs(rnd_dmga_4-dmgA)<th||Math.abs(rnd_dmga_4-dmgB)<th) { ChangeFontColor("rnd_dmga_4",highlight);
 	} else { ChangeFontColor("rnd_dmga_4",common); }
-	if(abs(rnd_dmgd_1-dmgA)<th||abs(rnd_dmgd_1-dmgB)<th) { ChangeFontColor("rnd_dmgd_1",highlight);
+	if(Math.abs(rnd_dmgd_1-dmgA)<th||Math.abs(rnd_dmgd_1-dmgB)<th) { ChangeFontColor("rnd_dmgd_1",highlight);
 	} else { ChangeFontColor("rnd_dmgd_1",common); }
-	if(abs(rnd_dmgd_2-dmgA)<th||abs(rnd_dmgd_2-dmgB)<th) { ChangeFontColor("rnd_dmgd_2",highlight);
+	if(Math.abs(rnd_dmgd_2-dmgA)<th||Math.abs(rnd_dmgd_2-dmgB)<th) { ChangeFontColor("rnd_dmgd_2",highlight);
 	} else { ChangeFontColor("rnd_dmgd_2",common); }
-	if(abs(rnd_dmgd_3-dmgA)<th||abs(rnd_dmgd_3-dmgB)<th) { ChangeFontColor("rnd_dmgd_3",highlight);
+	if(Math.abs(rnd_dmgd_3-dmgA)<th||Math.abs(rnd_dmgd_3-dmgB)<th) { ChangeFontColor("rnd_dmgd_3",highlight);
 	} else { ChangeFontColor("rnd_dmgd_3",common); }
-	if(abs(rnd_dmgd_4-dmgA)<th||abs(rnd_dmgd_4-dmgB)<th) { ChangeFontColor("rnd_dmgd_4",highlight);
+	if(Math.abs(rnd_dmgd_4-dmgA)<th||Math.abs(rnd_dmgd_4-dmgB)<th) { ChangeFontColor("rnd_dmgd_4",highlight);
 	} else { ChangeFontColor("rnd_dmgd_4",common); }
 	
 	document.getElementById("rnd_dmga_0").innerHTML = rnd_dmga_0;
