@@ -10,19 +10,26 @@
 		<script type="text/javascript" src="js.js"></script>
 		<title>地城邂逅工具包</title>
 	</head>
-	<body> 
+	<body οnlοad="show_time()"> 
 		<div class="topnav">
 			<div class="container-fluid">
-			    <div >
-				<a class="navbar-brand" data-toggle="tab" href="#">地城邂逅</a>
-			    </div>
 			    <ul class="nav nav-tabs">
+				<li><a data-toggle="tab" href="#home">地城邂逅</a></li>
 				<li><a data-toggle="tab" href="#first">先手機率</a></li>
 				<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
 			    </ul>
 			</div>
 		</div>   
 		<div class="tab-content">
+			<div id="home" class="tab-pane fade">
+				<div id="nowDiv"></div>
+				<label for="date_draw">目標日期：</label><input id="date_draw" type="datetime-local"/>
+				<p><input type="button" name="submit" value="計算" onclick="time_count()" /></p>
+				<tr>
+					<td>時間差距</td>
+					<td><p id="time_remain">0日0小時</p></td>
+				</tr>
+			</div> 
 			<div id="first" class="tab-pane fade">
 				<p id="warau">Author: Mistin｜自填增減敏的版本(自用)｜數據來源: 巴友G5、StupidCat</p>
 				<div class="input_agi" style="border: solid 1px silver; border-radius: 15px;">
