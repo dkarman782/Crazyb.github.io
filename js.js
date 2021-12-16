@@ -249,8 +249,13 @@ function war_count(){
 
 }
 
+function fract(num) {
+	return num - Math.trunc(num);
+}
+
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
+	var th = 1000;
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
 	var x = 1-dmgB/dmgA;
@@ -264,6 +269,44 @@ function rnd_dmg(){
 	rnd_dmga_0 = dmgA/rnd_dmga_0;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
 	rnd_dmga_0 = dmgA/rnd_dmga_0;
+	
+	document.getElementById("color96").innerHTML = "black";
+	document.getElementById("color97").innerHTML = "black";
+	document.getElementById("color98").innerHTML = "black";
+	document.getElementById("color99").innerHTML = "black";
+	document.getElementById("color100").innerHTML = "black";
+	document.getElementById("color101").innerHTML = "black";
+	document.getElementById("color102").innerHTML = "black";
+	document.getElementById("color103").innerHTML = "black";
+	document.getElementById("color104").innerHTML = "black";
+	
+	if(Math.abs(1-fract(100*dmgA/rnd_dmga_0))<1/th) {
+		var y = 100*dmgA/rnd_dmga_0;
+		y = y.toFixed(1);
+		if(y==96) document.getElementById("color96").innerHTML = "#E00000";
+		if(y==97) document.getElementById("color97").innerHTML = "#E00000";
+		if(y==98) document.getElementById("color98").innerHTML = "#E00000";
+		if(y==99) document.getElementById("color99").innerHTML = "#E00000";
+		if(y==100) document.getElementById("color100").innerHTML = "#E00000";
+		if(y==101) document.getElementById("color101").innerHTML = "#E00000";
+		if(y==102) document.getElementById("color102").innerHTML = "#E00000";
+		if(y==103) document.getElementById("color103").innerHTML = "#E00000";
+		if(y==104) document.getElementById("color104").innerHTML = "#E00000";
+	}
+	
+	if(Math.abs(1-fract(100*dmgB/rnd_dmga_0))<1/th) {
+		var y = 100*dmgB/rnd_dmga_0;
+		y = y.toFixed(1);
+		if(y==96) document.getElementById("color96").innerHTML = "#E00000";
+		if(y==97) document.getElementById("color97").innerHTML = "#E00000";
+		if(y==98) document.getElementById("color98").innerHTML = "#E00000";
+		if(y==99) document.getElementById("color99").innerHTML = "#E00000";
+		if(y==100) document.getElementById("color100").innerHTML = "#E00000";
+		if(y==101) document.getElementById("color101").innerHTML = "#E00000";
+		if(y==102) document.getElementById("color102").innerHTML = "#E00000";
+		if(y==103) document.getElementById("color103").innerHTML = "#E00000";
+		if(y==104) document.getElementById("color104").innerHTML = "#E00000";
+	}
 	
 	var rnd_dmga_1 = rnd_dmga_0*1.01;
 	var rnd_dmga_2 = rnd_dmga_0*1.02;
