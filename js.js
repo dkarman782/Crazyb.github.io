@@ -1,3 +1,16 @@
+function show_time(){
+	var date = new Date();
+	var now = "";
+	now = date.getFullYear()+"年";
+	now = now + (date.getMonth()+1)+"月";
+	now = now + date.getDate()+"日";
+	now = now + date.getHours()+"时";
+	now = now + date.getMinutes()+"分";
+	now = now + date.getSeconds()+"秒";
+	document.getElementById("nowDiv").innerHTML = now;
+	setTimeout("show_time()",1000);
+}
+
 function war_count(){
 	const form = document.forms['input_agi'];
 	var Ap_agi = Number(form.elements.Ap_agi.value);
@@ -237,6 +250,7 @@ function war_count(){
 	}
 
 }
+
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
 	var dmgA = Number(form.elements.dmgA.value);
