@@ -4,8 +4,8 @@ function time_count(){
 	var time_draw = new Date(input_time).getTime();
 	var time_dif = time_draw - now;
 	var hour_dif = time_dif/(1000*3600);
-	var day_dif = hour_dif/24;
-	hour_dif = hour_dif%24;
+	var day_dif = Math.floor(hour_dif/24);
+	hour_dif = Math.floor(hour_dif%24);
 	document.getElementById("time_remain").innerHTML = day_dif+"日"+hour_dif+"小時";
 }
 
