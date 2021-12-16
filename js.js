@@ -270,15 +270,15 @@ function rnd_dmg(){
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
 	rnd_dmga_0 = dmgA/rnd_dmga_0;
 	
-	document.getElementById("color96").innerHTML = "black";
-	document.getElementById("color97").innerHTML = "black";
-	document.getElementById("color98").innerHTML = "black";
-	document.getElementById("color99").innerHTML = "black";
-	document.getElementById("color100").innerHTML = "black";
-	document.getElementById("color101").innerHTML = "black";
-	document.getElementById("color102").innerHTML = "black";
-	document.getElementById("color103").innerHTML = "black";
-	document.getElementById("color104").innerHTML = "black";
+	document.getElementById("color96").innerHTML = "#333";
+	document.getElementById("color97").innerHTML = "#333";
+	document.getElementById("color98").innerHTML = "#333";
+	document.getElementById("color99").innerHTML = "#333";
+	document.getElementById("color100").innerHTML = "#333";
+	document.getElementById("color101").innerHTML = "#333";
+	document.getElementById("color102").innerHTML = "#333";
+	document.getElementById("color103").innerHTML = "#333";
+	document.getElementById("color104").innerHTML = "#333";
 	
 	if(Math.abs(1-fract(100*dmgA/rnd_dmga_0))<1/th) {
 		var y = 100*dmgA/rnd_dmga_0;
