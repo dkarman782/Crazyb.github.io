@@ -7,13 +7,13 @@ function time_show(){
 	now = now + date.getHours()+"时";
 	now = now + date.getMinutes()+"分";
 	now = now + date.getSeconds()+"秒";
-	document.getElementById("home").innerHTML = now;
+	document.getElementById("nowDiv").innerHTML = now;
 	setTimeout("time_show()",1000);
 }
 
 function time_count(){
 	var now = new Date();
-	var time_draw = document.getElementById(time_draw).value;
+	var time_draw = document.getElementById(time_draw).innerHTML;
 	document.getElementById("time_remain").innerHTML = time_draw;
 }
 
