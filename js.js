@@ -1,4 +1,4 @@
-function show_time(){
+function time_show(){
 	var date = new Date();
 	var now = "";
 	now = date.getFullYear()+"年";
@@ -7,8 +7,14 @@ function show_time(){
 	now = now + date.getHours()+"时";
 	now = now + date.getMinutes()+"分";
 	now = now + date.getSeconds()+"秒";
-	document.getElementById("nowDiv").innerHTML = now;
-	setTimeout("show_time()",1000);
+	document.getElementById("home").innerHTML = now;
+	setTimeout("time_show()",1000);
+}
+
+function time_count(){
+	var now = new Date();
+	var time_draw = document.getElementById(time_draw).value;
+	document.getElementById("time_remain").innerHTML = time_draw;
 }
 
 function war_count(){
