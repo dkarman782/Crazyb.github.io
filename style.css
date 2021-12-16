@@ -1,13 +1,3 @@
-.input_time{
-    text-align: center;
-}
-label{
-    text-align: center;
-    padding-right: 20px;
-}
-input[id="input_time"]{
-    text-align: center;
-}
 .input_agi{
     width: 90%;
     height: 80%;
@@ -58,7 +48,7 @@ td[id="player"]{
     color: white;
     text-align: center;
 }
-p[id="warau"], p[id="time_remain"]{
+p[id="warau"]{
     text-align: center;
     padding-right: 20px;
 }
@@ -117,6 +107,7 @@ button{
   
 .topnav a:hover {
     color: white;
+    background-color: black;
 }
   
 .topnav a.active {
