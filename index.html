@@ -13,15 +13,18 @@
 	<body> 
 		<div class="topnav">
 			<div class="container-fluid">
-			    <ul class="nav nav-tabs">
-				<li><a class="navbar-brand" data-toggle="tab" href="#home">地城邂逅</a></li>
-				<li><a data-toggle="tab" href="#first">先手機率</a></li>
-				<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
-			    </ul>
+				<div class="navbar-header">
+					<a class="navbar-brand" data-toggle="tab" href="#home">地城邂逅</a>
+				</div>
+				<ul class="nav nav-tabs">
+					<li><a data-toggle="tab" href="#first">先手機率</a></li>
+					<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
+				</ul>
 			</div>
 		</div>   
 		<div class="tab-content">
 			<div id="home" class="tab-pane fade in active">
+				<br><br>
 				<label for="input_time">目標時間：</label><input id="input_time" type="datetime-local"/>
 				<button onclick="time_count()">計算</button> 
 				<p>時間差距</p>
