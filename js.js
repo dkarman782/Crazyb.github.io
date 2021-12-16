@@ -253,11 +253,10 @@ function ChangeFontColor(id,color_change){
     var OriginalFont=document.getElementById(id).innerHTML;
     document.getElementById(id).innerHTML='<font color=color_change>'+OriginalFont+'</font>';
 }
-*/
 function fract(num) {
 	return num - Math.trunc(num);
 }
-
+*/
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
 	var th = 3;
@@ -274,9 +273,7 @@ function rnd_dmg(){
 	rnd_dmg_a[0] = rnd_dmg_a[0].toFixed(2);
 	rnd_dmg_a[0] = (1-rnd_dmg_a[0])*x;
 	rnd_dmg_a[0] = rnd_dmg_a[0]/x.toFixed(2);
-	rnd_dmg_a[0] = (rnd_dmg_a[0]+1)*dmgA;
-	
-	rnd_dmg_a[0] = dmgA/rnd_dmg_a[0];
+	rnd_dmg_a[0] = 1/(rnd_dmg_a[0]+1);
 	rnd_dmg_a[0] = rnd_dmg_a[0].toFixed(2);
 	rnd_dmg_a[0] = dmgA/rnd_dmg_a[0];
 	
