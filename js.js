@@ -249,6 +249,11 @@ function war_count(){
 
 }
 
+function ChangeFontColor(id,color_change){
+    var OriginalFont=document.getElementById(id).innerHTML;
+    document.getElementById(id).innerHTML='<font color=color_change>'+OriginalFont+'</font>';
+}
+
 function fract(num) {
 	return num - Math.trunc(num);
 }
@@ -270,42 +275,42 @@ function rnd_dmg(){
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
 	rnd_dmga_0 = dmgA/rnd_dmga_0;
 	
-	document.getElementById("color96").innerHTML = "#333";
-	document.getElementById("color97").innerHTML = "#333";
-	document.getElementById("color98").innerHTML = "#333";
-	document.getElementById("color99").innerHTML = "#333";
-	document.getElementById("color100").innerHTML = "#333";
-	document.getElementById("color101").innerHTML = "#333";
-	document.getElementById("color102").innerHTML = "#333";
-	document.getElementById("color103").innerHTML = "#333";
-	document.getElementById("color104").innerHTML = "#333";
+	ChangeFontColor("rnd_dmga_0","black");
+	ChangeFontColor("rnd_dmga_1","black");
+	ChangeFontColor("rnd_dmga_2","black");
+	ChangeFontColor("rnd_dmga_3","black");
+	ChangeFontColor("rnd_dmga_4","black");
+	ChangeFontColor("rnd_dmgd_1","black");
+	ChangeFontColor("rnd_dmgd_2","black");
+	ChangeFontColor("rnd_dmgd_3","black");
+	ChangeFontColor("rnd_dmgd_4","black");
 	
 	if(Math.abs(1-fract(100*dmgA/rnd_dmga_0))<1/th) {
 		var y = 100*dmgA/rnd_dmga_0;
 		y = y.toFixed(1);
-		if(y==96) document.getElementById("color96").innerHTML = "#E00000";
-		if(y==97) document.getElementById("color97").innerHTML = "#E00000";
-		if(y==98) document.getElementById("color98").innerHTML = "#E00000";
-		if(y==99) document.getElementById("color99").innerHTML = "#E00000";
-		if(y==100) document.getElementById("color100").innerHTML = "#E00000";
-		if(y==101) document.getElementById("color101").innerHTML = "#E00000";
-		if(y==102) document.getElementById("color102").innerHTML = "#E00000";
-		if(y==103) document.getElementById("color103").innerHTML = "#E00000";
-		if(y==104) document.getElementById("color104").innerHTML = "#E00000";
+		if(y==96) ChangeFontColor("rnd_dmgd_4","red");
+		if(y==97) ChangeFontColor("rnd_dmgd_3","red");
+		if(y==98) ChangeFontColor("rnd_dmgd_2","red");
+		if(y==99) ChangeFontColor("rnd_dmgd_1","red");
+		if(y==100) ChangeFontColor("rnd_dmga_0","red");
+		if(y==101) ChangeFontColor("rnd_dmga_1","red");
+		if(y==102) ChangeFontColor("rnd_dmga_2","red");
+		if(y==103) ChangeFontColor("rnd_dmga_3","red");
+		if(y==104) ChangeFontColor("rnd_dmga_4","red");
 	}
 	
 	if(Math.abs(1-fract(100*dmgB/rnd_dmga_0))<1/th) {
 		var y = 100*dmgB/rnd_dmga_0;
 		y = y.toFixed(1);
-		if(y==96) document.getElementById("color96").innerHTML = "#E00000";
-		if(y==97) document.getElementById("color97").innerHTML = "#E00000";
-		if(y==98) document.getElementById("color98").innerHTML = "#E00000";
-		if(y==99) document.getElementById("color99").innerHTML = "#E00000";
-		if(y==100) document.getElementById("color100").innerHTML = "#E00000";
-		if(y==101) document.getElementById("color101").innerHTML = "#E00000";
-		if(y==102) document.getElementById("color102").innerHTML = "#E00000";
-		if(y==103) document.getElementById("color103").innerHTML = "#E00000";
-		if(y==104) document.getElementById("color104").innerHTML = "#E00000";
+		if(y==96) ChangeFontColor("rnd_dmgd_4","red");
+		if(y==97) ChangeFontColor("rnd_dmgd_3","red");
+		if(y==98) ChangeFontColor("rnd_dmgd_2","red");
+		if(y==99) ChangeFontColor("rnd_dmgd_1","red");
+		if(y==100) ChangeFontColor("rnd_dmga_0","red");
+		if(y==101) ChangeFontColor("rnd_dmga_1","red");
+		if(y==102) ChangeFontColor("rnd_dmga_2","red");
+		if(y==103) ChangeFontColor("rnd_dmga_3","red");
+		if(y==104) ChangeFontColor("rnd_dmga_4","red");
 	}
 	
 	var rnd_dmga_1 = rnd_dmga_0*1.01;
