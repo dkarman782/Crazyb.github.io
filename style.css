@@ -48,9 +48,16 @@ td[id="player"]{
     color: white;
     text-align: center;
 }
-p[id="warau"]{
+p[id="warau"], p[id="time_remain"], label[for="input_time"]{
     text-align: center;
     padding-right: 20px;
+}
+input[id="input_time"]{
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
 }
 .input_dmg{
     width: 90%;
