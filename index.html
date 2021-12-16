@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js.js"></script>
 		<title>地城邂逅工具包</title>
 	</head>
-	<body οnlοad="time_show()"> 
+	<body> 
 		<div class="topnav">
 			<div class="container-fluid">
 			    <ul class="nav nav-tabs">
@@ -21,7 +21,7 @@
 			</div>
 		</div>   
 		<div class="tab-content">
-			<div id="home" class="tab-pane fade">
+			<div id="home" class="tab-pane fade" οnlοad="time_show()">
 				<p id="nowDiv">123456</p>
 				<label for="input_time">目標日期：</label><input id="input_time" type="datetime-local" name="time_draw"/>
 				<p><input type="button" name="submit" value="計算" onclick="time_count()" /></p>
