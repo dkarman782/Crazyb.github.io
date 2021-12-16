@@ -1,6 +1,9 @@
 a{
     text-decoration:none;
 }
+a:hover{
+    text-decoration:none;
+}
 .input_agi{
     width: 90%;
     height: 80%;
