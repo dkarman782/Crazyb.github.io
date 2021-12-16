@@ -6,7 +6,7 @@ function time_count(){
 	var hour_dif = time_dif/(1000*3600);
 	var day_dif = Math.floor(hour_dif/24);
 	hour_dif = Math.floor(hour_dif%24);
-	document.getElementById("time_remain").innerHTML = day_dif+"日"+hour_dif+"小時";
+	document.getElementById("time_remain").innerHTML = "時間差距："+day_dif+"日"+hour_dif+"小時";
 }
 
 function war_count(){
