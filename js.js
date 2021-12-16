@@ -266,7 +266,7 @@ function rnd_dmg(){
 	var dmgB = Number(form.elements.dmgB.value);
 	var x = 1-dmgB/dmgA;
 	var OriginalFont=document.getElementById("rnd_dmga_0").innerHTML;
-	document.getElementById(rnd_dmga_0).innerHTML='<font color="yellow">'+OriginalFont+'</font>';
+	document.getElementById("rnd_dmga_0").innerHTML='<font color="yellow">'+OriginalFont+'</font>';
 	
 	var rnd_dmga_0 = x.toFixed(2)/x;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
