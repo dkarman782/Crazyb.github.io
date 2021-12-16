@@ -1,8 +1,12 @@
 function time_count(){
 	var now = new Date().getTime();
 	var input_time = document.getElementById("input_time").value;
-	var time_draw = new Date(input_time);
-	document.getElementById("time_remain").innerHTML = time_draw;
+	var time_draw = new Date(input_time).getTime();
+	var time_dif = time_draw - now;
+	var hour_dif = time_dif/(1000*3600);
+	var day_dif = hour_dif/24;
+	hour_dif = hour_dif%24;
+	document.getElementById("time_remain").innerHTML = day_dif+"日"+hour_dif+"小時";
 }
 
 function war_count(){
