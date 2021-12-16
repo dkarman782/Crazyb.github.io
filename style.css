@@ -52,6 +52,9 @@ p[id="warau"], p[id="time_remain"], label[for="input_time"]{
     text-align: center;
     padding-right: 20px;
 }
+.input_time{
+    text-align: center;
+}
 input[id="input_time"]{
     text-align: center;
 }
