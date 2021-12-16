@@ -248,25 +248,28 @@ function war_count(){
 	}
 
 }
-
+/*
 function ChangeFontColor(id,color_change){
-
+    var OriginalFont=document.getElementById(id).innerHTML;
+    document.getElementById(id).innerHTML='<font color=color_change>'+OriginalFont+'</font>';
 }
-
+*/
 function fract(num) {
 	return num - Math.trunc(num);
 }
 
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
+	/*
 	var th = 3;
 	var common = "blue";
 	var highlight = "red";
+	var OriginalFont=document.getElementById("rnd_dmga_0").innerHTML;
+	document.getElementById("rnd_dmga_0").innerHTML='<font color="yellow">'+OriginalFont+'</font>';
+	*/
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
 	var x = 1-dmgB/dmgA;
-	var OriginalFont=document.getElementById("rnd_dmga_0").innerHTML;
-	document.getElementById("rnd_dmga_0").innerHTML='<font color="yellow">'+OriginalFont+'</font>';
 	
 	var rnd_dmga_0 = x.toFixed(2)/x;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
@@ -296,7 +299,7 @@ function rnd_dmg(){
 	rnd_dmgd_2 = Number(Math.floor(rnd_dmgd_2));
 	rnd_dmgd_3 = Number(Math.floor(rnd_dmgd_3));
 	rnd_dmgd_4 = Number(Math.floor(rnd_dmgd_4));
-	
+	/*
 	if(Math.abs(rnd_dmga_0-dmgA)<th||Math.abs(rnd_dmga_0-dmgB)<th) { ChangeFontColor("rnd_dmga_0",highlight);
 	} else { ChangeFontColor("rnd_dmga_0",common); }
 	if(Math.abs(rnd_dmga_1-dmgA)<th||Math.abs(rnd_dmga_1-dmgB)<th) { ChangeFontColor("rnd_dmga_1",highlight);
@@ -315,7 +318,7 @@ function rnd_dmg(){
 	} else { ChangeFontColor("rnd_dmgd_3",common); }
 	if(Math.abs(rnd_dmgd_4-dmgA)<th||Math.abs(rnd_dmgd_4-dmgB)<th) { ChangeFontColor("rnd_dmgd_4",highlight);
 	} else { ChangeFontColor("rnd_dmgd_4",common); }
-	
+	*/
 	document.getElementById("rnd_dmga_0").innerHTML = rnd_dmga_0;
 	document.getElementById("rnd_dmga_1").innerHTML = rnd_dmga_1;
 	document.getElementById("rnd_dmga_2").innerHTML = rnd_dmga_2;
