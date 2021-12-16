@@ -260,7 +260,7 @@ function fract(num) {
 
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
-	var th = 1000;
+	var th = 1;
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
 	var x = 1-dmgB/dmgA;
