@@ -8,7 +8,7 @@ function time_count(){
 	now = now + date.getMinutes()+"分";
 	now = now + date.getSeconds()+"秒";
 	var input_time = document.getElementById("input_time").value;
-	document.getElementById("time_remain").innerHTML = input_time;
+	document.getElementById("time_remain").innerHTML = date;
 }
 
 function war_count(){
