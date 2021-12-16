@@ -250,8 +250,7 @@ function war_count(){
 }
 
 function ChangeFontColor(id,color_change){
-    var OriginalFont=document.getElementById(id).innerHTML;
-    document.getElementById(id).innerHTML='<font color=color_change>'+OriginalFont+'</font>';
+
 }
 
 function fract(num) {
@@ -266,6 +265,8 @@ function rnd_dmg(){
 	var dmgA = Number(form.elements.dmgA.value);
 	var dmgB = Number(form.elements.dmgB.value);
 	var x = 1-dmgB/dmgA;
+	var OriginalFont=document.getElementById("rnd_dmga_0").innerHTML;
+	document.getElementById(rnd_dmga_0).innerHTML='<font color="yellow">'+OriginalFont+'</font>';
 	
 	var rnd_dmga_0 = x.toFixed(2)/x;
 	rnd_dmga_0 = rnd_dmga_0.toFixed(2);
