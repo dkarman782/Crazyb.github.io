@@ -1,7 +1,8 @@
 function time_count(){
 	var now = new Date().getTime();
 	var input_time = document.getElementById("input_time").value;
-	document.getElementById("time_remain").innerHTML = input_time.getTime();
+	var time_draw = new Date(input_time);
+	document.getElementById("time_remain").innerHTML = time_draw;
 }
 
 function war_count(){
