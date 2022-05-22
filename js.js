@@ -260,6 +260,7 @@ function fract(num) {
 function rnd_dmg(){
 	const form = document.forms['input_dmg'];
 	var th = 3;
+	var count = 0;
 	let color_a = [];
 	let color_d = [];
 	let rnd_dmg_a = [];
@@ -282,13 +283,26 @@ function rnd_dmg(){
 		rnd_dmg_d[i] = rnd_dmg_a[0]*(1-i/100);
 		rnd_dmg_a[i] = Number(Math.floor(rnd_dmg_a[i]));
 		rnd_dmg_d[i] = Number(Math.floor(rnd_dmg_d[i]));
-		if(Math.abs(rnd_dmg_a[i]-dmgA)<th||Math.abs(rnd_dmg_a[i]-dmgB)<th) { color_a[i] = 'red';
+		if(Math.abs(rnd_dmg_a[i]-dmgA)<th||Math.abs(rnd_dmg_a[i]-dmgB)<th) {
+			color_a[i] = 'red';
+			count+=1;
 		} else { color_a[i] = 'black'; }
-		if(Math.abs(rnd_dmg_d[i]-dmgA)<th||Math.abs(rnd_dmg_d[i]-dmgB)<th) { color_d[i] = 'red';
+		if(Math.abs(rnd_dmg_d[i]-dmgA)<th||Math.abs(rnd_dmg_d[i]-dmgB)<th) {
+			color_d[i] = 'red';
+			count+=1;
 		} else { color_d[i] = 'black'; }
 	} rnd_dmg_a[0] = Number(Math.floor(rnd_dmg_a[0]));
-	if(Math.abs(rnd_dmg_a[0]-dmgA)<th||Math.abs(rnd_dmg_a[0]-dmgB)<th) { color_a[0] = 'red';
+	if(Math.abs(rnd_dmg_a[0]-dmgA)<th||Math.abs(rnd_dmg_a[0]-dmgB)<th) {
+		color_a[0] = 'red';
+		count+=1;
 	} else { color_a[0] = 'black'; }
+	
+	if(count<2) {
+		rnd_dmg_a = [];
+		rnd_dmg_d = [];
+		rnd_dmg_a[0] = "輸入同配置下的兩個暴穿傷害值";
+		color_a[0] = 'red';
+	}
 	
 	document.getElementById("rnd_dmg_a0").innerHTML = '<font color='+color_a[0]+'>'+rnd_dmg_a[0]+'</font>';
 	document.getElementById("rnd_dmg_a1").innerHTML = '<font color='+color_a[1]+'>'+rnd_dmg_a[1]+'</font>';
