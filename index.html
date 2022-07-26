@@ -43,49 +43,51 @@
 							</tr>
 							<tr>
 								<td>總和</td>
-								<td><input id="input_agi" name="Ap_agi" type="number" /></td>
-								<td><input id="input_agi" name="Bp_agi" type="number" /></td>
+								<td><input id="input_agi" name="Ap_agi" type="number" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Bp_agi" type="number" oninput="war_count()" /></td>
 							</tr>
 							<tr>
 								<td>+敏%</td>
-								<td><input id="input_agi" name="Aa_agi" type="number" value="0" /></td>
-								<td><input id="input_agi" name="Ba_agi" type="number" value="0" /></td>
+								<td><input id="input_agi" name="Aa_agi" type="number" value="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Ba_agi" type="number" value="0" oninput="war_count()" /></td>
 							</tr>
 							<tr>
 								<td>-敏%</td>
-								<td><input id="input_agi" name="Ad_agi" type="number" value="0" /></td>
-								<td><input id="input_agi" name="Bd_agi" type="number" value="0" /></td>
+								<td><input id="input_agi" name="Ad_agi" type="number" value="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Bd_agi" type="number" value="0" oninput="war_count()" /></td>
 							</tr>
 							<tr>
 								<td>技能類型</td>
 								<td>
-									<select id="input_agi" name="A_type">
+									<select id="input_agi" name="A_type" onchange="war_count()">
 										<option value="5.25">快速發動</option>
 										<option value="2.5">快速攻擊</option>
 										<option value="1.75">無血量變化技能</option>
 										<option value="1">補血技能</option>
 										<option value="1">一般物攻</option>
 										<option value="0.4">一般魔攻</option>
-										<option value="0.01">慢速技能(實驗)</option>
+										<option value="0.01">慢速技能</option>
 									</select>
 								</td>
 								<td>
-									<select id="input_agi" name="B_type">
+									<select id="input_agi" name="B_type" onchange="war_count()">
 										<option value="5.25">快速發動</option>
 										<option value="2.5">快速攻擊</option>
 										<option value="1.75">無血量變化技能</option>
 										<option value="1">補血技能</option>
 										<option value="1">一般物攻</option>
 										<option value="0.4">一般魔攻</option>
-										<option value="0.01">慢速技能(實驗)</option>
+										<option value="0.01">慢速技能</option>
 									</select>
 								</td>
 							</tr>
 						</table><br>
+						<!--
 						<p>
 							<input type="button" name="submit" value="計算" onclick="war_count()" />
 							<input type="reset" value="重置" />
 						</p>
+						-->
 					</form>
 				</div><br>
 				<div class="showfirst" style="border: solid 1px silver; border-radius: 15px;">
@@ -105,6 +107,7 @@
 							<td><p id="war_showA_xg">0%</p></td>
 							<td><p id="war_showB_xg">0%</p></td>
 						</tr>
+						<!--
 						<tr><td colspan="3"><hr></td></tr>
 						<tr>
 							<td id="ff" colspan="3">浮動範圍4%</td>
@@ -119,15 +122,18 @@
 							<td><p id="Awinrate_wayB_4">0%</p></td>
 							<td><p id="Bwinrate_wayB_4">0%</p></td>
 						</tr>
+						-->
 						<tr><td colspan="3"><hr></td></tr>
 						<tr>
 							<td id="ff" colspan="3">浮動範圍5%</td>
 						</tr>
+						<!--
 						<tr>
 							<td>勝率(機率)</td>
 							<td><p id="Awinrate_wayA_5">0%</p></td>
 							<td><p id="Bwinrate_wayA_5">0%</p></td>
 						</tr>
+						-->
 						<tr>
 							<td>勝率(區間)</td>
 							<td><p id="Awinrate_wayB_5">0%</p></td>
@@ -149,14 +155,16 @@
 								<td>傷害B</td>
 							</tr>
 							<tr>
-								<td><input id="input_dmg" name="dmgA" type="number" /></td>
-								<td><input id="input_dmg" name="dmgB" type="number" /></td>
+								<td><input id="input_dmg" name="dmgA" type="number" oninput="rnd_dmg()" /></td>
+								<td><input id="input_dmg" name="dmgB" type="number" oninput="rnd_dmg()" /></td>
 							</tr>
 						</table><br>
+						<!--
 						<p>
 							<input type="button" name="submit" value="計算" onclick="rnd_dmg()" />
 							<input type="reset" value="重置" />
 						</p>
+						-->
 					</form>
 				</div><br>
 				<div class="showrnd" style="border: solid 1px silver; border-radius: 15px;">
