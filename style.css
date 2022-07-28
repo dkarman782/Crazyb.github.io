@@ -92,7 +92,7 @@ button{
 }
 input[id="day_remain"], input[id="hour_remain"]{
     height: 80%;
-    width: 10%;
+    width: 46px;
     margin: 0 auto;
     padding: 2px;
     text-align: center;
