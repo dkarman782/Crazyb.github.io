@@ -90,6 +90,13 @@ button{
     -moz-appearance: none;
     appearance: none;
 }
+input[id="day_remain"], input[id="hour_remain"]{
+    height: 80%;
+    width: 3%;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+}
 
 .topnav {
     overflow: hidden;
