@@ -11,16 +11,25 @@
 		<title>私用工具包</title>
 	</head>
 	<body> 
-		<div class="topnav">
+		<nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
-				<ul class="nav nav-tabs">
-					<li><a data-toggle="tab" href="#home">地城邂逅</a></li>
-					<li><a data-toggle="tab" href="#first">先手機率</a></li>
-					<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
-					<li><a data-toggle="tab" href="#excount">必殺計算</a></li>
-				</ul>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span> 
+                	</button>
+					<a class="navbar-brand" data-toggle="tab" href="#home">地城邂逅</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a data-toggle="tab" href="#first">先手機率</a></li>
+						<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
+						<li><a data-toggle="tab" href="#excount">必殺計算</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>   
+		</nav>
 		<div class="tab-content">
 			<div id="home" class="tab-pane fade">
 				<br><br>
