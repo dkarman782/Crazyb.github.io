@@ -25,7 +25,7 @@
 					<ul class="nav navbar-nav">
 						<li><a data-toggle="tab" href="#first">先手機率</a></li>
 						<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
-						<li><a data-toggle="tab" href="#excount">必殺計算</a></li>
+						<li><a data-toggle="tab" href="#excount">必殺計量(施工中)</a></li>
 					</ul>
 				</div>
 			</div>
@@ -38,11 +38,11 @@
 			</div> 
 			<div id="first" class="tab-pane fade">				
 				<br><br><br>
-				<p id="warau">自填+-敏私用版｜Thanks to: Mistin, G5, StupidCat</p>
+				<p style='text-align: center;'>自填+-敏私用版｜Thanks to: Mistin, G5, StupidCat</p>
 				<div class="input_agi" style="border: solid 1px silver; border-radius: 15px;">
 					<form name="input_agi" id="input_agi">
 						<table class="input_agi">
-							<tr><td id="player" colspan="3">戰爭遊戲先手機率推算</td></tr>
+							<tr><td id="ff" colspan="3">戰爭遊戲先手機率推算</td></tr>
 							<tr><td> </td><td>A玩家</td><td>B玩家</td></tr>
 							<tr>
 								<td>總和</td>
@@ -51,13 +51,13 @@
 							</tr>
 							<tr>
 								<td>+敏%</td>
-								<td><input id="input_agi" name="Aa_agi" type="number" value="0" oninput="war_count()" /></td>
-								<td><input id="input_agi" name="Ba_agi" type="number" value="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Aa_agi" type="number" placeholder="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Ba_agi" type="number" placeholder="0" oninput="war_count()" /></td>
 							</tr>
 							<tr>
 								<td>-敏%</td>
-								<td><input id="input_agi" name="Ad_agi" type="number" value="0" oninput="war_count()" /></td>
-								<td><input id="input_agi" name="Bd_agi" type="number" value="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Ad_agi" type="number" placeholder="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Bd_agi" type="number" placeholder="0" oninput="war_count()" /></td>
 							</tr>
 							<tr>
 								<td>技能類型</td>
@@ -95,7 +95,7 @@
 				</div><br>
 				<div class="showfirst" style="border: solid 1px silver; border-radius: 15px;">
 					<table class="showfirst">
-						<tr><td id="player">-</td><td id="player">玩家A</td><td id="player">玩家B</td></tr>
+						<tr><td id="ff">-</td><td id="ff">玩家A</td><td id="ff">玩家B</td></tr>
 						<tr><td>敏捷</td><td><p id="war_showA_agi">0</p></td><td><p id="war_showB_agi">0</p></td></tr>
 						<tr><td>差距</td><td><p id="war_showA_xg">0%</p></td><td><p id="war_showB_xg">0%</p></td></tr>
 						<!--
@@ -129,24 +129,17 @@
 			</div>
 			<div id="damage" class="tab-pane fade">
 				<br><br><br><br>
-				<div class="input_dmg" style="table-layout:fixed;word-break:break-all;border: solid 1px silver; border-radius: 15px;">
-					<form name="input_dmg" id="input_dmg">
-						<table class="input_dmg">
-							<tr><td id="player" colspan="3">浮動傷害表</td></tr>
-							<tr><td width=50%>傷害A</td><td><input id="input_dmg" name="dmgA" type="number" oninput="rnd_dmg()" /></td></tr>
-							<tr><td width=50%>傷害B</td><td><input id="input_dmg" name="dmgB" type="number" oninput="rnd_dmg()" /></td></tr>
-						</table><br>
-						<!--
-						<p>
-							<input type="button" name="submit" value="計算" onclick="rnd_dmg()" />
-							<input type="reset" value="重置" />
-						</p>
-						-->
-					</form>
+				<div class="input_dmg" style="border: solid 1px silver; border-radius: 15px;">
+					<table class="input_dmg">
+						<tr><td id="ff" colspan="3">浮動傷害表</td></tr>
+						<tr><td>　</td></tr>
+						<tr><td width=50%>傷害A</td><td><input id="dmgA" type="number" placeholder="輸入同配置下的" oninput="rnd_dmg()" /></td></tr>
+						<tr><td width=50%>傷害B</td><td><input id="dmgB" type="number" placeholder="兩個暴穿傷害值" oninput="rnd_dmg()" /></td></tr>
+					</table><br>
 				</div><br>
 				<div class="showrnd" style="border: solid 1px silver; border-radius: 15px;">
 					<table class="showrnd">
-						<tr><td id="player" width=50%>浮動範圍</td><td id="player">傷害值</td></tr>
+						<tr><td id="ff" width=50%>浮動範圍</td><td id="ff">傷害值</td></tr>
 						<tr><td width=50%>-4%</td><td><p id="rnd_dmg_d4">--------</p></td></tr>
 						<tr><td width=50%>-3%</td><td><p id="rnd_dmg_d3">--------</p></td></tr>
 						<tr><td width=50%>-2%</td><td><p id="rnd_dmg_d2">--------</p></td></tr>
@@ -159,8 +152,90 @@
 					</table>
 				</div>
 			</div>
-			<div id="excount" class="tab-pane fade">
+			<div id="excount" class="tab-pane">
+				<br><br><br><br>
+				<form>
+					<div class="extb" style="border: solid 1px silver; border-radius: 15px; overflow-x: auto;">
+						<table id='extb'>
+							<tr><td id="ff" colspan="16">必殺計量</td></tr>
+							<tr class='title'>
+								<th class='notes' style='color: blue; text-align: center;'>備註</th>
+								<th class='round'>回1</th>
+								<th class='round'>回2</th>
+								<th class='round'>回3</th>
+								<th class='round' style='color: red;'>回4</th>
+								<th class='round'>回5</th>
+								<th class='round'>回6</th>
+								<th class='round'>回7</th>
+								<th class='round' style='color: red;'>回8</th>
+								<th class='round'>回9</th>
+								<th class='round'>回10</th>
+								<th class='round'>回11</th>
+								<th class='round' style='color: red;'>回12</th>
+								<th class='round'>回13</th>
+								<th class='round'>回14</th>
+								<th class='round'>回15</th>
+							</tr>
+						</table>
+					</div>
+					<div style="text-align: center;">
+						<input id='cb_append_next' type='checkbox' checked='checked'><label>覆蓋模式</label><br>
+						<input type="reset" value="重置" />
+					</div>
+					
+					<div id='ex_select_temp' style='display: none;'>
+						<select class='ex_select' onchange='excount_AppendData(this)'>
+							<option value=""></option>
+							<option value="1">+0%</option>
+							<option value="4/3">+33%</option>
+							<option value="5/3">+66%</option>
+							<option value="2">+100%</option>
+							<option value="19/9">+111%</option>
+							<option value="7/3">+133%</option>
+							<option value="22/9">+144%</option>
+							<option value="8/3">+166%</option>
+							<option value="25/9">+177%</option>
+							<option value="3">+200%</option>
+							<option value="28/9">+211%</option>
+							<option style='color:red;' value="-125/9">必殺</option>
+						</select>
+					</div>
+				</form>
 			</div>
 		</div>
+		<script>
+		
+			$(function() {
+				$ex_select = $('#ex_select_temp .ex_select');
+				var notes = [, "例: 光勞(CE+土黑)", "例: 地勞", "例: 光芬", "例: 聖女"];
+				
+				for(r=1;r<=4;r++) {				
+					var $tr = $("<tr></tr>");
+					var temp = '<td><input class="notes" type="text" placeholder="'+notes[r]+'"></td>';
+					$tr.append(temp);
+				
+					for(c=1;c<=15;c++) {
+						var $td = $("<td></td>");
+						$td.append($ex_select.clone());
+						$tr.append($td);
+					} $('#extb').append($tr);					
+				}
+				
+				for(t=1;t<=2;t++) {
+					var $tr;
+					if(t == 1) {
+						$tr = $("<tr id='t1'></tr>");
+						$tr.append('<td>累計計量</td>');
+					}if(t == 2) {
+						$tr = $("<tr id='t2'></tr>");
+						$tr.append('<td>必殺數</td>');
+					} for(i=1;i<=15;i++) {
+						var $td = $("<td class='font" + t + "'></td>");
+						$tr.append($td);
+					} $('#extb').append($tr);
+				}
+			});
+			
+		</script>
 	</body>
 </html>
