@@ -43,15 +43,6 @@ td[id="ff"]{
     color: white;
     text-align: center;
 }
-td[id="player"]{
-    background-color: green;
-    color: white;
-    text-align: center;
-}
-p[id="warau"]{
-    text-align: center;
-    padding-right: 20px;
-}
 .input_dmg{
     width: 90%;
     height: 80%;
@@ -66,7 +57,7 @@ p[id="warau"]{
     text-align: center;
     padding: 15px;
 }
-input[id="input_dmg"]{
+input[id="dmgA"], input[id="dmgB"]{
     height: 80%;
     width: 70%;
     margin: 0 auto;
@@ -85,16 +76,14 @@ table[class="input_dmg"]{
     margin: 0 auto;
     text-align: center;
 }
-button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
 input[id="day_remain"], input[id="hour_remain"]{
     height: 80%;
     width: 46px;
     margin: 0 auto;
     padding: 2px;
+    text-align: center;
+}
+th[class="round"]{
     text-align: center;
 }
 
