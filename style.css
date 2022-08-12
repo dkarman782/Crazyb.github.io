@@ -1,22 +1,31 @@
-.input_agi{
+.input_agi, .showfirst{
     width: 90%;
     height: 80%;
     margin: 0 auto;
     text-align: center;
     padding: 15px;
 }
-.showfirst{
+.input_dmg, .showrnd, .extb{
     width: 90%;
     height: 80%;
     margin: 0 auto;
     text-align: center;
     padding: 15px;
+	border: solid 1px silver;
+	border-radius: 15px;
 }
 table{
     width: 95%;
     height: 90%;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
+}
+input[id="day_remain"], input[id="hour_remain"]{
+    height: 80%;
+    width: 46px;
+    margin: 0 auto;
+    padding: 2px;
     text-align: center;
 }
 input[id="input_agi"], select[id="input_agi"]{
@@ -26,13 +35,17 @@ input[id="input_agi"], select[id="input_agi"]{
     padding: 2px;
     text-align: center;
 }
-table[class="showfirst"]{
-    width: 70%;
+input[id="dmgA"], input[id="dmgB"]{
     height: 80%;
+    width: 120px;
     margin: 0 auto;
+    padding: 2px;
     text-align: center;
 }
-table[class="input_agi"]{
+input[class="notes"]{
+	width: 130px;
+}
+table[class="showfirst"], table[class="input_agi"], table[id="showrnd"], table[id="input_dmg"]{
     width: 70%;
     height: 80%;
     margin: 0 auto;
@@ -43,77 +56,8 @@ td[id="ff"]{
     color: white;
     text-align: center;
 }
-.input_dmg{
-    width: 90%;
-    height: 80%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 15px;
-}
-.showrnd{
-    width: 90%;
-    height: 80%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 15px;
-}
-input[id="dmgA"], input[id="dmgB"]{
-    height: 80%;
-    width: 120px;
-    margin: 0 auto;
-    padding: 2px;
-    text-align: center;
-}
-p[class="showrnd"]{
-    width: 120px;
-}
-table[class="showrnd"]{
-    width: 70%;
-    height: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-table[class="input_dmg"]{
-    width: 70%;
-    height: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-input[id="day_remain"], input[id="hour_remain"]{
-    height: 80%;
-    width: 46px;
-    margin: 0 auto;
-    padding: 2px;
-    text-align: center;
-}
 th[class="round"]{
     text-align: center;
 }
-input[class="notes"]{
-	width: 130px;
-}
 
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
-  
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-  
-.topnav a:hover {
-    color: white;
-    background-color: black;
-    text-decoration:none;
-}
-  
-.topnav a.active {
-    color: white;
-}
 
