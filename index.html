@@ -26,8 +26,9 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a data-toggle="tab" href="#first">先手機率</a></li>
-						<li><a data-toggle="tab" href="#damage">傷害計算</a></li>
+						<li><a data-toggle="tab" href="#damage">浮動傷害</a></li>
 						<li><a data-toggle="tab" href="#excount">必殺計量</a></li>
+						<li><a data-toggle="tab" href="#sheets">傷害計算&裝備檢測</a></li>
 					</ul>
 				</div>
 			</div>
@@ -136,9 +137,9 @@
 				<div class="input_dmg">
 					<table id="input_dmg">
 						<tr><td id="ff" colspan="3">浮動傷害表</td></tr>
-						<tr><td width=35% height=35px>傷害A</td><td><input id="dmgA" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" placeholder="輸入同配置下的" oninput="rnd_dmg()" /></td></tr>
-						<tr><td width=35% height=35px>傷害B</td><td><input id="dmgB" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" placeholder="兩個暴穿傷害值" oninput="rnd_dmg()" /></td></tr>
-					</table><br>
+						<tr><td width=35% height=35px>傷害A</td><td><input id="dmgA" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); rnd_dmg();" placeholder="輸入同配置下的"></td></tr>
+						<tr><td width=35% height=35px>傷害B</td><td><input id="dmgB" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); rnd_dmg();" placeholder="兩個暴穿傷害值"></td></tr>
+					</table>
 				</div><br>
 				<div class="showrnd">
 					<table id="showrnd">
@@ -196,6 +197,14 @@
 						</select>
 					</div>
 				</form>
+			</div>
+			<div id="sheets" class="tab-pane">
+				<br><br><br><br>
+				<div style="text-align: center;">
+					只推試算表<br>
+					<a href="https://docs.google.com/spreadsheets/d/1qivHKpRimnyLTF-KKHZ8lozGH0N0HKcCvMFxsupAXdc/edit?usp=sharing">傷害計算</a><br>
+					<a href="https://docs.google.com/spreadsheets/d/1sZkBEOC-GhxDE4XB28jMUYD8Hnr9qHl7E4tHvLHYFZ4/edit?usp=sharing">裝備檢測</a>
+				</div> 
 			</div>
 		</div>
 	</body>
