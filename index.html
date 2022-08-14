@@ -17,10 +17,10 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    	<span class="icon-bar"></span>
-                    	<span class="icon-bar"></span>
-                    	<span class="icon-bar"></span> 
-                	</button>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 					<a class="navbar-brand" data-toggle="tab" href="#home">地城邂逅</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
@@ -28,7 +28,7 @@
 						<li><a data-toggle="tab" href="#first">先手機率</a></li>
 						<li><a data-toggle="tab" href="#damage">浮動傷害</a></li>
 						<li><a data-toggle="tab" href="#excount">必殺計量</a></li>
-						<li><a data-toggle="tab" href="#gsheets">傷害計算&裝備檢測</a></li>
+						<li><a data-toggle="tab" href="#gsheets">傷害計算 & 裝備檢測</a></li>
 					</ul>
 				</div>
 			</div>
@@ -47,22 +47,22 @@
 				<div class="input_agi" style="border: solid 1px silver; border-radius: 15px;">
 					<form name="input_agi" id="input_agi">
 						<table class="input_agi">
-							<tr><td id="ff" colspan="3">戰爭遊戲先手機率推算</td></tr>
+							<tr><td id="hd_1st" colspan="3">戰爭遊戲先手機率推算</td></tr>
 							<tr><td> </td><td><input id="input_agi" style="border: 0;" placeholder='角色A'></td><td><input id="input_agi" style="border: 0;" placeholder='角色B'></td></tr>
 							<tr>
-								<td>總和</td>
-								<td><input id="input_agi" name="Ap_agi" type="number" oninput="war_count()" /></td>
-								<td><input id="input_agi" name="Bp_agi" type="number" oninput="war_count()" /></td>
+								<td>面板</td>
+								<td><input id="input_agi" name="Ap_agi" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Bp_agi" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>+敏%</td>
-								<td><input id="input_agi" name="Aa_agi" type="number" placeholder="0" oninput="war_count()" /></td>
-								<td><input id="input_agi" name="Ba_agi" type="number" placeholder="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Aa_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Ba_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>-敏%</td>
-								<td><input id="input_agi" name="Ad_agi" type="number" placeholder="0" oninput="war_count()" /></td>
-								<td><input id="input_agi" name="Bd_agi" type="number" placeholder="0" oninput="war_count()" /></td>
+								<td><input id="input_agi" name="Ad_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Bd_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>技能類型</td>
@@ -90,118 +90,87 @@
 								</td>
 							</tr>
 						</table><br>
-						<!--
-						<p>
-							<input type="button" name="submit" value="計算" onclick="war_count()" />
-							<input type="reset" value="重置" />
-						</p>
-						-->
 					</form>
 				</div><br>
 				<div class="showfirst" style="border: solid 1px silver; border-radius: 15px;">
 					<table class="showfirst">
-						<tr><td id="ff">-</td><td id="ff">角色A</td><td id="ff">角色B</td></tr>
-						<tr><td>敏捷</td><td><p id="war_showA_agi">0</p></td><td><p id="war_showB_agi">0</p></td></tr>
-						<tr><td>差距</td><td><p id="war_showA_xg">0%</p></td><td><p id="war_showB_xg">0%</p></td></tr>
-						<!--
+						<tr><td id="hd_1st">-</td><td id="hd_1st">角色A</td><td id="hd_1st">角色B</td></tr>
+						<tr><td height=30px>敏捷</td><td id="war_showA_agi">0</td><td id="war_showB_agi">0</td></tr>
+						<tr><td height=30px>差距</td><td id="war_showA_xg">0%</td><td id="war_showB_xg">0%</td></tr>
 						<tr><td colspan="3"><hr></td></tr>
-						<tr>
-							<td id="ff" colspan="3">浮動範圍4%</td>
-						</tr>
-						<tr>
-							<td>勝率(機率)</td>
-							<td><p id="Awinrate_wayA_4">0%</p></td>
-							<td><p id="Bwinrate_wayA_4">0%</p></td>
-						</tr>
-						<tr>
-							<td>勝率(區間)</td>
-							<td><p id="Awinrate_wayB_4">0%</p></td>
-							<td><p id="Bwinrate_wayB_4">0%</p></td>
-						</tr>
-						-->
-						<tr><td colspan="3"><hr></td></tr>
-						<tr><td id="ff" colspan="3">浮動範圍5%</td></tr>
-						<!--
-						<tr>
-							<td>勝率(機率)</td>
-							<td><p id="Awinrate_wayA_5">0%</p></td>
-							<td><p id="Bwinrate_wayA_5">0%</p></td>
-						</tr>
-						-->
-						<tr><td>勝率(區間)</td><td><p id="Awinrate_wayB_5">0%</p></td><td><p id="Bwinrate_wayB_5">0%</p></td></tr>
+						<tr><td id="hd_1st" colspan="3">浮動範圍5%</td></tr>
+						<tr><td height=30px>勝率(區間)</td><td id="Awinrate_wayB_5">0%</td><td id="Bwinrate_wayB_5">0%</td></tr>
 					</table>
 				</div>
 			</div>
 			<div id="damage" class="tab-pane fade">
-				<br><br><br><br>
+				<br><br><br>
 				<div class="input_dmg">
 					<table id="input_dmg">
-						<tr><td id="ff" colspan="3">浮動傷害表</td></tr>
+						<tr><td id="hd_dmg" colspan="3">浮動傷害表</td></tr>
 						<tr><td width=35% height=35px>傷害A</td><td><input id="dmgA" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); rnd_dmg();" placeholder="輸入同配置下的"></td></tr>
 						<tr><td width=35% height=35px>傷害B</td><td><input id="dmgB" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); rnd_dmg();" placeholder="兩個暴穿傷害值"></td></tr>
 					</table>
 				</div><br>
 				<div class="showrnd">
 					<table id="showrnd">
-						<tr><td id="ff">浮動範圍</td><td id="ff">傷害值</td></tr>
+						<tr><td id="hd_dmg">浮動範圍</td><td id="hd_dmg">傷害值</td></tr>
 					</table>
 				</div>
 			</div>
 			<div id="excount" class="tab-pane">
 				<br><br><br><br>
-				<form>
-					<div class="extb" style="overflow-x: auto;">
-						<table id='extb'>
-							<tr><td id="ff" colspan="16">必殺計量</td></tr>
-							<tr class='title'>
-								<th class='round' style='color: blue;'>備註</th>
-								<th class='round'>回1</th>
-								<th class='round'>回2</th>
-								<th class='round'>回3</th>
-								<th class='round' style='color: red;'>回4</th>
-								<th class='round'>回5</th>
-								<th class='round'>回6</th>
-								<th class='round'>回7</th>
-								<th class='round' style='color: red;'>回8</th>
-								<th class='round'>回9</th>
-								<th class='round'>回10</th>
-								<th class='round'>回11</th>
-								<th class='round' style='color: red;'>回12</th>
-								<th class='round'>回13</th>
-								<th class='round'>回14</th>
-								<th class='round'>回15</th>
-							</tr>
-						</table>
-					</div>
-					<div style="text-align: center;">
-						<input id='cb_append_next' type='checkbox' checked='checked'><label>覆蓋模式</label><br>
-						<input type='reset' value='重置' onclick='resetForm();'>
-						<input type='button' value='下載' onclick='download_extb()'>
-					</div>
-					
-					<div id='ex_select_temp' style='display: none;'>
-						<select class='ex_select' onchange='excount_AppendData(this)'>
-							<option value="0"></option>
-							<option value="1">+0%</option>
-							<option value="1+1/3">+33%</option>
-							<option value="1+2/3">+66%</option>
-							<option value="2">+100%</option>
-							<option value="2+1/9">+111%</option>
-							<option value="2+1/3">+133%</option>
-							<option value="2+4/9">+144%</option>
-							<option value="2+2/3">+166%</option>
-							<option value="2+7/9">+177%</option>
-							<option value="3">+200%</option>
-							<option value="3+1/9">+211%</option>
-							<option value="-14+1/9" style='color: red; background-color: #e6eeff;'>必殺</option>
-						</select>
-					</div>
-				</form>
+				<div class="extb" style="overflow-x: auto;">
+					<table id='extb' style="background-color: white;">
+						<tr><td id="hd_ex" colspan="16">必殺計量</td></tr>
+						<tr class='title'>
+							<th class='round' style='color: blue;'>備註</th>
+							<th class='round'>回1</th>
+							<th class='round'>回2</th>
+							<th class='round'>回3</th>
+							<th class='round' style='color: red;'>回4</th>
+							<th class='round'>回5</th>
+							<th class='round'>回6</th>
+							<th class='round'>回7</th>
+							<th class='round' style='color: red;'>回8</th>
+							<th class='round'>回9</th>
+							<th class='round'>回10</th>
+							<th class='round'>回11</th>
+							<th class='round' style='color: red;'>回12</th>
+							<th class='round'>回13</th>
+							<th class='round'>回14</th>
+							<th class='round'>回15</th>
+						</tr>
+					</table>
+				</div>
+				<div style="text-align: center;">
+					<input id='cb_append_next' type='checkbox' checked='checked'><label>覆蓋模式</label><br>
+					<input type='button' value='重置' onclick='clear_extb();'>
+					<input type='button' value='下載' onclick='save_as_png("ex_tb");'>
+				</div>
+				
+				<div id='ex_select_temp' style='display: none;'>
+					<select class='ex_select' onchange='excount_AppendData(this)'>
+						<option value="0"></option>
+						<option value="1">+0%</option>
+						<option value="1+1/3">+33%</option>
+						<option value="1+2/3">+66%</option>
+						<option value="2">+100%</option>
+						<option value="2+1/9">+111%</option>
+						<option value="2+1/3">+133%</option>
+						<option value="2+4/9">+144%</option>
+						<option value="2+2/3">+166%</option>
+						<option value="2+7/9">+177%</option>
+						<option value="3">+200%</option>
+						<option value="3+1/9">+211%</option>
+						<option value="-14+1/9" style='color: red; background-color: #e6eeff;'>必殺</option>
+					</select>
+				</div>
 			</div>
 			<div id="gsheets" class="tab-pane">
 				<br><br><br><br>
 				<div style="text-align: center;">
-					只推試算表<br>
+					<b>只推試算表</b><br>
 					<a href="https://docs.google.com/spreadsheets/d/1qivHKpRimnyLTF-KKHZ8lozGH0N0HKcCvMFxsupAXdc/edit?usp=sharing">傷害計算</a><br>
 					<a href="https://docs.google.com/spreadsheets/d/1sZkBEOC-GhxDE4XB28jMUYD8Hnr9qHl7E4tHvLHYFZ4/edit?usp=sharing">裝備檢測</a>
 				</div> 
