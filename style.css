@@ -51,8 +51,18 @@ table[class="showfirst"], table[class="input_agi"], table[id="showrnd"], table[i
     margin: 0 auto;
     text-align: center;
 }
-td[id="ff"]{
+td[id="hd_1st"]{
     background-color: green;
+    color: white;
+    text-align: center;
+}
+td[id="hd_dmg"]{
+    background-color: navy;
+    color: white;
+    text-align: center;
+}
+td[id="hd_ex"]{
+    background-color: black;
     color: white;
     text-align: center;
 }
