@@ -57,12 +57,12 @@ td[id="hd_1st"]{
     text-align: center;
 }
 td[id="hd_dmg"]{
-    background-color: navy;
+    background-color: black;
     color: white;
     text-align: center;
 }
 td[id="hd_ex"]{
-    background-color: black;
+    background-color: navy;
     color: white;
     text-align: center;
 }
