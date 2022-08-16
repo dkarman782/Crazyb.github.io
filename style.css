@@ -52,6 +52,7 @@ table[class="showfirst"], table[class="input_agi"], table[id="showrnd"], table[i
     text-align: center;
 }
 td[id="hd_1st"]{
+	width: 30%;
     background-color: green;
     color: white;
     text-align: center;
