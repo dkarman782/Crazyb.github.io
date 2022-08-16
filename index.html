@@ -51,18 +51,18 @@
 							<tr><td> </td><td><input id="input_agi" style="border: 0;" placeholder='角色A'></td><td><input id="input_agi" style="border: 0;" placeholder='角色B'></td></tr>
 							<tr>
 								<td>面板</td>
-								<td><input id="input_agi" name="Ap_agi" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
-								<td><input id="input_agi" name="Bp_agi" type="number" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Ap_agi" type="number" min=0 onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Bp_agi" type="number" min=0 onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>+敏%</td>
-								<td><input id="input_agi" name="Aa_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
-								<td><input id="input_agi" name="Ba_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Aa_agi" type="number" min=0 placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Ba_agi" type="number" min=0 placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>-敏%</td>
-								<td><input id="input_agi" name="Ad_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
-								<td><input id="input_agi" name="Bd_agi" type="number" placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Ad_agi" type="number" min=0 placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
+								<td><input id="input_agi" name="Bd_agi" type="number" min=0 placeholder="0" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,''); war_count();" /></td>
 							</tr>
 							<tr>
 								<td>技能類型</td>
@@ -94,11 +94,9 @@
 				</div><br>
 				<div class="showfirst" style="border: solid 1px silver; border-radius: 15px;">
 					<table class="showfirst">
-						<tr><td id="hd_1st">-</td><td id="hd_1st">角色A</td><td id="hd_1st">角色B</td></tr>
-						<tr><td height=30px>敏捷</td><td id="war_showA_agi">0</td><td id="war_showB_agi">0</td></tr>
-						<tr><td height=30px>差距</td><td id="war_showA_xg">0%</td><td id="war_showB_xg">0%</td></tr>
-						<tr><td colspan="3"><hr></td></tr>
-						<tr><td id="hd_1st" colspan="3">浮動範圍5%</td></tr>
+						<tr><td id="hd_1st">浮動範圍5%</td><td id="hd_1st">角色A</td><td id="hd_1st">角色B</td></tr>
+						<tr><td height=30px>換算速度</td><td id="war_showA_agi">0</td><td id="war_showB_agi">0</td></tr>
+						<tr><td height=30px>穩超敏差</td><td id="war_showA_xg">0</td><td id="war_showB_xg">0</td></tr>
 						<tr><td height=30px>勝率(區間)</td><td id="Awinrate_wayB_5">0%</td><td id="Bwinrate_wayB_5">0%</td></tr>
 					</table>
 				</div>
@@ -147,6 +145,7 @@
 					<input id='cb_append_next' type='checkbox' checked='checked'><label>覆蓋模式</label><br>
 					<input type='button' value='重置' onclick='clear_extb();'>
 					<input type='button' value='下載' onclick='save_as_png("extb", 0.85);'>
+					<!-- <br><label id='progress'>-</label> -->
 				</div>
 				
 				<div id='ex_select_temp' style='display: none;'>
