@@ -142,10 +142,11 @@
 					</table>
 				</div>
 				<div style="text-align: center;">
-					<input id='cb_append_next' type='checkbox' checked='checked'><label>覆蓋模式</label><br>
-					<input type='button' value='重置' onclick='clear_extb();'>
-					<input type='button' value='下載' onclick='save_as_png("extb", 0.85);'>
-					<!-- <br><label id='progress'>-</label> -->
+					<br><input id='cb_append_next' type='checkbox' checked='checked'>
+					<label class='unselectable' onclick='$("#cb_append_next").prop("checked", !$("#cb_append_next").prop("checked"));'>覆蓋模式</label>
+					<br><br><input type='button' value='重置' onclick='clear_extb();'>
+					<input type='button' value='下載' onclick='download("extb", 0.85, "expg");'>
+					<br><br><label id='expg'></label>
 				</div>
 				
 				<div id='ex_select_temp' style='display: none;'>
@@ -153,15 +154,19 @@
 						<option value="0"></option>
 						<option value="1">+0%</option>
 						<option value="1+1/3">+33%</option>
+						<option value="1+4/9">+44%</option>
 						<option value="1+2/3">+66%</option>
+						<option value="1+7/9">+77%</option>
 						<option value="2">+100%</option>
 						<option value="2+1/9">+111%</option>
 						<option value="2+1/3">+133%</option>
 						<option value="2+4/9">+144%</option>
+						<option value="2+5/9">+155%</option>
 						<option value="2+2/3">+166%</option>
 						<option value="2+7/9">+177%</option>
 						<option value="3">+200%</option>
 						<option value="3+1/9">+211%</option>
+						<option value="3+2/9">+222%</option>
 						<option value="-14+1/9" style='color: red; background-color: #e6eeff;'>必殺</option>
 					</select>
 				</div>
