@@ -144,9 +144,11 @@
 				<div style="text-align: center;">
 					<br><input id='cb_append_next' type='checkbox' checked='checked'>
 					<label class='unselectable' onclick='$("#cb_append_next").prop("checked", !$("#cb_append_next").prop("checked"));'>覆蓋模式</label>
-					<br><br><input type='button' value='重置' id='clear_extb'>
+					<br><input type='button' value='載入' id='load_extb'>
+					<input type='button' value='保存' id='save_extb'>
+					<br><input type='button' value='重置' id='clear_extb'>
 					<input type='button' value='下載' onclick='download("extb", 0.85, "expg");'>
-					<br><br><label id='expg'></label>
+					<br><label id='expg'></label>
 				</div>
 				
 				<div id='ex_select_temp' style='display: none;'>
@@ -168,6 +170,13 @@
 						<option value="3+1/9">+211%</option>
 						<option value="3+2/9">+222%</option>
 						<option value="-14+1/9" style='color: #8080ff; background-color: #ffcccc;'>必殺</option>
+					</select>
+					<select class='mem_ex_select' onchange='ex_cal();'>
+						<option value="0">記憶</option>
+						<option value="1/9">+11%</option>
+						<option value="2/9">+22%</option>
+						<option value="3/9">+33%</option>
+						<option value="4/9">+44%</option>
 					</select>
 				</div>
 			</div>
