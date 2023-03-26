@@ -12,12 +12,10 @@
 		<script type="text/javascript" src="js.js"></script>
 		<title>私用工具包</title>
 		<script>
-		    function navbardiv() {
-		      if(new URLSearchParams(window.location.search).get("q")!=="349383461") window.location.href = "about:blank";
-		    }
+		    function navbar_div_on_body() { if(new URLSearchParams(window.location.search).get("q")!=="349383461") window.location.href = "about:blank"; }
 		</script>
 	</head>
-	<body onload="navbardiv()"> 
+	<body onload="navbar_div_on_body()"> 
 		<nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
