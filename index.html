@@ -11,24 +11,8 @@
 		<script type="text/javascript" src="FileSaver.js"></script>
 		<script type="text/javascript" src="js.js"></script>
 		<title>私用工具包</title>
-		<script>
-		    var q = "349383461"; // 加密密码
-    
-		    // 获取 URL 参数并验证z
-		    function validateUrl() {
-		      var urlParams = new URLSearchParams(window.location.search);
-		      var passwordInput = urlParams.get("q");
-		      if (passwordInput === q) {
-		        // 密码正确，显示网页内容
-		        //document.write("");
-		      } else {
-		        // 密码错误，重定向到一个空白页
-		        window.location.href = "about:blank";
-		      }
-		    }
-		</script>
 	</head>
-	<body onload="validateUrl()"> 
+	<body onload="if(new URLSearchParams(window.location.search).get("q")!=="349383461") window.location.href = "about:blank";"> 
 		<nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
